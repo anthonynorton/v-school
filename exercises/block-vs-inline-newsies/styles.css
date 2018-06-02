@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,900');
+
+:root {
+  --article-featured-width: 80%;
+  --color-main: lightblue;
+  --featured-article-padding: 0.625em;
+  --spacer-lines: 1px solid #aaa;
+}
+
+body {
+  border: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+p {
+  hyphens: auto;
+}
+
+.main {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 800px;
+  border-right: var(--spacer-lines);
+  border-left: var(--spacer-lines);
+}
+
+.header-main {
+  align-items: center;
+  border-bottom: 5px solid var(--color-main);
+  display: flex;
+  height: 200px;
+  justify-content: center;
+}
+
+.header-main .title {
+  font-size: 6.75em;
+  font-weight: 100;
+}
+
+.contents {
+}
+
+.article-featured {
+  display: inline-block;
+  width: var(--article-featured-width);
+  border-bottom: var(--spacer-lines);
+}
+
+.article-featured > p {
+  padding: 0 var(--featured-article-padding);
+}
+
+.article-featured > p:first-of-type {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.header-featured {
+  font-size: 2em;
+  padding: 0.625em;
+}
+
+.header-featured .title {
+  text-align: left;
+}
+
+.img-featured {
+  float: right;
+  margin-left: var(--featured-article-padding);
+}
+
+.side-story {
+  border-left: var(--spacer-lines);
+  display: inline-block;
+  float: right;
+  width: calc(100% - var(--article-featured-width) - 1px);
+}
+
+.side-story > p {
+  font-size: 0.875em;
+  margin-left: var(--featured-article-padding);
+  margin-right: var(--featured-article-padding);
+}
+
+.side-story > div:last-of-type {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.classifieds {
+  display: inline-block;
+  width: var(--article-featured-width);
+  text-align: center;
+}
+
+.classifieds > p {
+  border-top: 3px solid;
+  width: calc(19% - (var(--featured-article-padding) / 2)*4 );
+  padding: var(--featured-article-padding) calc(var(--featured-article-padding) / 2);
+  margin-right: 1%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0.6125em;
+}
+
+.classifieds > p:last-of-type {
+  margin-right: 0;
+}
+
+.footer-main {
+  border-top: 3px solid var(--color-main);
+  padding: var(--featured-article-padding);
+}
+
+.footer-main > div {
+  display: inline-block;
+  min-width: 200px;
+  margin-bottom: var(--featured-article-padding);
+}
+
+.clear-fix {
+  clear: both;
+}
