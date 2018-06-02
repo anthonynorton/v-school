@@ -1,0 +1,4 @@
+([A-z\-' ]+)	\1	...	([A-z\.\- ]+)
+{name: '$1', characterName: '$2'},
+
+// Past cast from IMDB here, and run a find and replaceAll.
