@@ -10,3 +10,5 @@ const results = input.split('').reduce((results, char) => {
 }, {keep: '', dupeplicates: ''});
 
 console.log(results);
+
+return results;
