@@ -1,3 +1,4 @@
+const startTime = Date.now();
 const input = 'bodkkeeper larry';
 
 const results = input.split('').reduce((results, char) => {
@@ -11,4 +12,5 @@ const results = input.split('').reduce((results, char) => {
 
 console.log(results);
 
+console.log(Date.now() - startTime);
 return results;

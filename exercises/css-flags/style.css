@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 20px;
+  background-color: #bbb;
+}
+
+.flag {
+  background-color: greenyellow;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 50px;
+}
+
+.france {
+  background: linear-gradient(90deg,#00278F 33.333%, #fff 33.333%, #fff 66.666%, #DB3F41 66.666%);
+  height: 387px;
+  width: 580px;
+}
+
+.germany {
+  background: linear-gradient(#000 33.333%, #CC2A1D 33.333%, #CC2A1D 66.666%, #F9CE46 66.666%);
+  height: 348px;
+  width: 580px;
+}
+
+.madagascar {
+  background: linear-gradient(#EA4E3F 50%, #367B42 50%);
+  height: 387px;
+  position: relative;
+  width: 580px;
+}
+
+.madagascar::after {
+  background-color: #fff;
+  content: ' ';
+  height: 387px;
+  left: 0;
+  position: absolute;
+  width: 193px;
+}
+
+.switzerland {
+  background-color: #EB3323;
+  height: 580px;
+  position: relative;
+  width: 580px;
+}
+
+.switzerland::before, .switzerland::after {
+  background-color: #fff;
+  bottom: 0;
+  content: ' ';
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.switzerland::before {
+  height: 362px;
+  width: 109px;
+}
+
+.switzerland::after {
+  width: 362px;
+  height: 109px;
+}
+
+.sweden {
+  background: linear-gradient(#286AA2, #286AA2 146px, #F7CD46 146px, #F7CD46 219px, #286AA2 219px);
+  height: 363px;
+  position: relative;
+  width: 580px;
+}
+
+.sweden::before {
+  background-color: #F7CD46;
+  content: ' ';
+  height: 100%;
+  left: 182px;
+  position: absolute;
+  width: 72px;
+}
+
+.gambia {
+  background: linear-gradient(#BE2C2F, #BE2C2F 129px, #fff 129px, #fff 150px, #062186 150px, #062186 237px, #fff 238px, #fff 260px, #4A7533 260px);
+  height: 387px;
+  width: 580px;
+}
+
+.tonga {
+  background-color: #B22418;
+  height: 290px;
+  position: relative;
+  width: 580px;
+}
+
+.tonga::before, .tonga::after {
+  background-color: #fff;
+  content: ' ';
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.tonga::before {
+  background-color: #fff;
+  /* background: linear-gradient(rgb(39, 94, 169), rgb(39, 94, 169) 55px, #fff 54px, #fff 91px, rgb(39, 94, 169) 91px); */
+  /* height: 145px;
+  width: 241px; */
+  height: 50%;
+  width: 41.9%;
+}
+
+.tonga::after {
+  background-color: #B22418;
+  height: 50%;
+  width: 41.9%;
+  clip-path: polygon(43% 12.2%, 58% 12.2%, 58% 37.3%, 72.7% 37.3%, 72.7% 62.8%, 57.7% 62.8%, 57.7% 88%, 42.8% 88%, 42.8% 62.8%, 28% 62.8%, 28% 37.3%, 43% 37.3%);
+}
+
+.japan {
+  background-color: #fff;
+  height: 387px;
+  position: relative;
+  width: 580px;
+}
+
+.japan::before {
+  background-color: #c70025;
+  content: '';
+  position: absolute;
+  height: 231px;
+  width: 231px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 100%;
+}
+
+.greece {
+  background: repeating-linear-gradient(rgb(39, 94, 169), rgb(39, 94, 169) 43px, #fff 43px, white 86px);
+  height: 387px;
+  width: 580px;
+  position: relative;
+}
+
+.greece::before, .greece::after {
+  background-color: #fff;
+  content: ' ';
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.greece::before {
+  background: linear-gradient(rgb(39, 94, 169), rgb(39, 94, 169) 86px, #fff 30px, #fff 129px, rgb(39, 94, 169) 129px);
+  height: 215px;
+  width: 215px;
+}
+
+.greece::after {
+  height: 215px;
+  left: 86px;
+  width: 43px;
+}
+
+.niger {
+  background: linear-gradient(#e05206, #e05206 33.333%, #fff, 33.333%, #fff 66.666%, #0db02b 66.666%);
+  height: 497px;
+  position: relative;
+  width: 580px;
+}
+
+.niger::before {
+  background-color: #e05206;
+  border-radius: 100%;
+  bottom: 0;
+  content: '';
+  height: 141px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 141px;
+}
+
+.maldives {
+  background-color: #d21034;
+  height: 387px;
+  position: relative;
+  width: 580px;
+}
+
+.maldives::before {
+  background-color: #007e3a;
+  bottom: 0;
+  content: '';
+  height: 193px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 386px;
+}
+
+.maldives::after {
+  background-color: #007e3a;
+  border-radius: 100%;
+  bottom: 0;
+  box-shadow: -24px 0 0 #fff;
+  content: '';
+  height: 129px;
+  left: 100px;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 133px;
+  
+}
+
+.belize {
+  background: linear-gradient(#ce1126, #ce1126 7.2%, #003f87 7.2%, #003f87 92.8%, #ce1126 92.8%);
+  height: 387px;
+  position: relative;
+  width: 580px;
+}
+
+.belize::before {
+  background-color: #fff;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  height: 50%;
+  width: 100px;
+}
+
+.belize::before {
+  background-color: #fff;
+  content: '';
+  position: absolute;
+  height: 249px;
+  width: 249px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 100%;
+  border: 3px solid #4F2609;
+  box-shadow: 14px 20px 0 #fff, -14px 20px 0 #fff, 14px -20px 0 #fff, -14px -20px 0 #fff, 25px 0 0 #fff, -25px 0 0 #fff, 0 -25px 0 #fff, 0 25px 0 #fff, -17px -17px 0 #fff, 17px -17px 0 #fff, -17px 17px 0 #fff, 17px 17px 0 #Fff;
+}
