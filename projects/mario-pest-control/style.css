@@ -185,12 +185,21 @@ body {
 }
 
 @media screen and (min-width: 600px) {
+  body {
+    display: grid;
+    grid-template-rows: 50px 1fr auto;
+  }
+
   .header-main {
     grid-template-columns: 50px 1fr 50px;
   }
   
   .company-title {
     justify-content: center;
+  }
+
+  .main-content {
+    grid-row: 1/3;
   }
   
   .baddie-li {
@@ -211,6 +220,10 @@ body {
   .baddie-price {
     min-width: 75px;
     text-align: right;
+  }
+
+  .footer-info-li {
+    padding: 0 0 0.625em 0;
   }
   
   .footer-info-li.footer-address {
