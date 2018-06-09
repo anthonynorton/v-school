@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <header class="main-header"></header>
+  <main class="content">
+    <form action="" name="flight-options" id="flight-options">
+      <label for="first-name">First Name: </label>
+      <input id="first-name" name="fname" type="text" placeholders="First Name">
+      <label for="last-name">Last Name: </label>
+      <input id="last-name" name="lname" type="text" placeholders="Last Name">
+      <label for="age">Age: </label>
+      <input id="age" name="age" type="number" min="0" max="150" placeholder="Age" default="18">
+      <input type="radio" name="gender" id="male"><label for="male">Male</label>
+      <input type="radio" name="gender" id="female"><label for="female">female</label>
+      <input type="radio" name="gender" id="not-say"><label for="not-say">Prefer not to say</label>
+      <select name="destination" id="destination">
+        <option value="null" disabled>Select a destination</option>
+        <option value="lax">Los Angeles International Airport</option>
+        <option value="bos">Logan International Airport</option>
+        <option value="atl">Hartsfield-Jackson Atlanta International Airport</option>
+      </select>
+      <div id="diatary-restricions" class="dietary-restrictions">
+        <input type="checkbox" name="dietRestrict" id="vegan"><label for="vegan">Vegan</label>
+        <input type="checkbox" name="dietRestrict" id="lacto-vegetarian"><label for="lacto-vegetarian">Lacto-Vegetarian</label>
+        <input type="checkbox" name="dietRestrict" id="vegetarians"><label for="vegetarians">Vegetarians</label>
+        <input type="checkbox" name="dietRestrict" id="pescetarians"><label for="pescetarians">Pescetarians</label>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </main>
+  <footer class="main-footer"></footer>
+  <script src="app.js"></script>
+</body>
+</html>
