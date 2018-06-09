@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,68 +8,74 @@
   <title>Mario Pest Control</title>
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-  <header class="header-main">
-    <div class="logo-wrap"><img src="./assets/MarioSymbol.svg" alt="" class="logo"></div>
-    <div class="company-title">Mario Pest Control</div>
-  </header>
-  <main class="main-content">
-    <ul class="baddie-ul">
-      <li class="baddie-li">
-        <div class="baddie-img-wrap">
-          <img src="./assets/goomba01.png" alt="" class="baddie-img">
-        </div>
-        <div class="baddie-info">
-          <label class="baddie-name" for="goombas">Goombas</label>
-          <div class="baddie-cost">
-            <div class="baddie-price" data-coins="5">5 Coins</div>
-            <input id="goombas" name="num-goombas" type="number" class="baddie-quantity" >
+  <main class="wrap">
+    <header class="header-main">
+      <div class="logo-wrap">
+        <img src="./assets/MarioSymbol.svg" alt="" class="logo">
+      </div>
+      <div class="company-title">Mario Pest Control</div>
+    </header>
+    <section class="content-main">
+      <ul class="baddie-ul">
+        <li class="baddie-li">
+          <div class="baddie-img-wrap">
+            <img src="./assets/goomba01.png" alt="" class="baddie-img">
           </div>
-        </div>
-      </li>
-      <li class="baddie-li">
-        <div class="baddie-img-wrap">
-          <img src="./assets/bob-omb.jpg" alt="" class="baddie-img">
-        </div>
-        <div class="baddie-info">
-          <label class="baddie-name" for="bobombs">Bob-ombs</label>
-          <div class="baddie-cost">
-            <div class="baddie-price" data-coins="7">7 Coins</div>
-            <input id="bobombs" type="number" class="baddie-quantity" >
+          <div class="baddie-info">
+            <label class="baddie-name" for="goombas">Goombas</label>
+            <div class="baddie-cost">
+              <div class="baddie-price" data-coins="5">5 Coins</div>
+              <input id="goombas" name="num-goombas" type="number" class="baddie-quantity">
+            </div>
           </div>
-        </div>
-      </li>
-      <li class="baddie-li">
-        <div class="baddie-img-wrap">
-          <img src="./assets/cheep-cheep.jpg" alt="" class="baddie-img">
-        </div>
-        <div class="baddie-info">
-          <label class="baddie-name" for="cheepcheeps">Cheep-cheeps</label>
-          <div class="baddie-cost">
-            <div class="baddie-price" data-coins="11">11 Coins</div>
-            <input id="cheepcheeps" type="number" class="baddie-quantity" >
+        </li>
+        <li class="baddie-li">
+          <div class="baddie-img-wrap">
+            <img src="./assets/bob-omb.jpg" alt="" class="baddie-img">
           </div>
-        </div>
-      </li>
-    </ul>
-    <div class="baddie-totals">
-      <div class="baddie-total-label">Total Bill:</div>
-      <div class="baddie-total-result" id="baddie-total"></div>
-    </div>
+          <div class="baddie-info">
+            <label class="baddie-name" for="bobombs">Bob-ombs</label>
+            <div class="baddie-cost">
+              <div class="baddie-price" data-coins="7">7 Coins</div>
+              <input id="bobombs" type="number" class="baddie-quantity">
+            </div>
+          </div>
+        </li>
+        <li class="baddie-li">
+          <div class="baddie-img-wrap">
+            <img src="./assets/cheep-cheep.jpg" alt="" class="baddie-img">
+          </div>
+          <div class="baddie-info">
+            <label class="baddie-name" for="cheepcheeps">Cheep-cheeps</label>
+            <div class="baddie-cost">
+              <div class="baddie-price" data-coins="11">11 Coins</div>
+              <input id="cheepcheeps" type="number" class="baddie-quantity">
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="baddie-totals">
+        <div class="baddie-total-label">Total Bill:</div>
+        <div class="baddie-total-result" id="baddie-total">0</div>
+      </div>
+    </section>
+    <footer class="footer-main">
+      <div class="footer-info-li">
+        <a href="mailto:mariomario@plumber.com?subject=Mario%20I%20Need%20You&body=Mario%2C%20I%20have%20an%20infestation%20of%20baddies!%20There%20are%20Goombas%2C%20Bob-ombs%2C%20and%20Cheep-cheeps!%20Please%2C%20HELP!!!">mariomario@plumber.com</a>
+      </div>
+      <div class="footer-info-li">
+        <a href="https://mariobrothersexterminators.com">https://mariobrothersexterminators.com</a>
+      </div>
+      <a href="https://goo.gl/maps/EyBxTDS3HxF2" target="_blank" class="footer-info-li footer-address">
+        <div class="street">147 Castle Court</div>
+        <div class="city-state-zip">Miyamoto, Shigeru 91385</div>
+        <div class="country">Mushroom Kingdom</div>
+      </a>
+    </footer>
   </main>
-  <footer class="footer-main">
-    <div class="footer-info-li">
-      <a href="mailto:mariomario@plumber.com?subject=Mario%20I%20Need%20You&body=Mario%2C%20I%20have%20an%20infestation%20of%20baddies!%20There%20are%20Goombas%2C%20Bob-ombs%2C%20and%20Cheep-cheeps!%20Please%2C%20HELP!!!">mariomario@plumber.com</a>
-    </div>
-    <div class="footer-info-li">
-      <a href="https://mariobrothersexterminators.com">https://mariobrothersexterminators.com</a>
-    </div>
-    <a href="https://goo.gl/maps/EyBxTDS3HxF2" target="_blank" class="footer-info-li footer-address">
-      <div class="street">147 Castle Court</div>
-      <div class="city-state-zip">Miyamoto, Shigeru 91385</div>
-      <div class="country">Mushroom Kingdom</div>
-    </a>
-  </footer>
   <script src="./app.js"></script>
 </body>
+
 </html>

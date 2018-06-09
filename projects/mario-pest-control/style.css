@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+:root {
+  --mario-run-animation-speed: 5s;
+}
 
 * {
   box-sizing: border-box;
@@ -12,30 +16,42 @@ html {
 body {
   border: none;
   height: 100%;
-  margin: 50px 0 0 0;
+  margin: 0;
   padding: 0;
   width: 100%;
   font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+.wrap {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.header-main, .content-main, .footer-main {
+  flex-shrink: 0;
 }
 
 .header-main {
-  background-color: #DB4814;
-  box-shadow: inset 2px 2px 0 #E3B8C5, inset -2px -2px 0 #050306;
-  color: #FFC2B9;
+  background-color: #db4814;
+  box-shadow: inset 2px 2px 0 #e3b8c5, inset -2px -2px 0 #050306;
+  color: #ffc2b9;
   display: grid;
   grid-template-columns: 50px 1fr;
-  background-color: ;
   height: 50px;
   position: fixed;
   width: 100%;
   top: 0;
 }
 
-.header-main::before, .header-main::after {
-  background: #FFC2B9;
+.header-main::before,
+.header-main::after {
+  background: #ffc2b9;
   box-shadow: 2px 2px 0 #050505;
-  content: '';
+  content: "";
   height: 4px;
   position: absolute;
   width: 4px;
@@ -51,14 +67,30 @@ body {
   right: 6px;
 }
 
-.main-content {
-  padding-top: 30px;
-  background-color: #6A94FB;
-  background-image: url("./assets/block.png");
-  background-repeat: repeat no-repeat;
-  background-size: 40px;
-  background-position-y: 100%;
+.content-main {
+  animation: mariorun calc(var(--mario-run-animation-speed)) linear 0s infinite;
+  background-color: #6a94fb;
+  background-image: url("./assets/block.png"), url("./assets/mario-running.gif"),
+    url("./assets/mario-mtn.png");
+  background-position-x: left, 0, 4.5vw;
+  background-position-y: 100%, calc(100% - 37px), calc(100% - 38px);
+  background-repeat: repeat no-repeat, no-repeat, no-repeat;
+  background-size: 40px, 50px, 200px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 50px 0 0 0;
   padding-bottom: 40px;
+  padding-top: 30px;
+}
+
+@keyframes mariorun {
+  from {
+    background-position-x: left, -5vw, 4.5vw;
+  }
+  to {
+    background-position-x: left, 105vw, 4.5vw;
+  }
 }
 
 .logo-wrap {
@@ -108,7 +140,7 @@ body {
 }
 
 .baddie-price::after {
-  content: ':';
+  content: ":";
   margin-right: 5px;
 }
 
@@ -121,19 +153,49 @@ body {
   max-height: 200px;
 }
 
+.baddie-quantity {
+  text-align: center;
+}
+
 .baddie-totals {
+  align-self: center;
+  background-color: #db4814;
+  box-shadow: inset 2px 2px 0 #e3b8c5, inset -2px -2px 0 #050306;
+  color: #ffc2b9;
+  text-shadow: 2px 3px 0 #050505, 1px 3px 0 #050505;
   display: flex;
   font-size: 1.25em;
   justify-content: center;
-  margin-bottom: 1.25em;
+  margin-bottom: 2em;
+  padding: 10px 15px;
+  position: relative;
 }
 
-.baddie-total-label{
+.baddie-totals::before,
+.baddie-totals::after {
+  background: #ffc2b9;
+  box-shadow: 2px 2px 0 #050505;
+  content: "";
+  height: 4px;
+  position: absolute;
+  width: 4px;
+}
+
+.baddie-totals::before {
+  bottom: 7px;
+  left: 6px;
+}
+
+.baddie-totals::after {
+  bottom: 7px;
+  right: 6px;
+}
+
+.baddie-total-label {
   font-weight: 800;
 }
 
 .baddie-total-result {
-  border-bottom: 1px solid #aaa;
   min-width: 150px;
   text-align: center;
 }
@@ -141,7 +203,7 @@ body {
 .footer-main {
   /* grid-row: 3; */
   align-items: center;
-  background-color: #E1441F;
+  background-color: #e1441f;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -165,58 +227,49 @@ body {
 }
 
 @media screen and (max-width: 599px) {
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    padding-top: 30px;
-  }
   .company-title {
     padding-left: 15px;
   }
-  
+
   .baddie-li {
     flex-direction: column;
     margin-bottom: 1.25em;
   }
-  
+
   .baddie-info {
     padding-top: 0.625em;
   }
 }
 
 @media screen and (min-width: 600px) {
-  body {
-    display: grid;
-    grid-template-rows: 50px 1fr auto;
-  }
-
   .header-main {
     grid-template-columns: 50px 1fr 50px;
   }
-  
+
   .company-title {
     justify-content: center;
   }
 
-  .main-content {
-    grid-row: 1/3;
+  .content-main {
+    animation: mariorun calc(var(--mario-run-animation-speed) * 2) linear 0s
+      infinite;
   }
-  
+
   .baddie-li {
     flex-direction: row-reverse;
     margin-bottom: 1em;
   }
-  
+
   .baddie-img-wrap {
     min-width: 210px;
     display: flex;
     justify-content: center;
   }
-  
+
   .baddie-info {
     min-width: 210px;
   }
-  
+
   .baddie-price {
     min-width: 75px;
     text-align: right;
@@ -225,16 +278,44 @@ body {
   .footer-info-li {
     padding: 0 0 0.625em 0;
   }
-  
+
   .footer-info-li.footer-address {
     display: flex;
     align-items: center;
   }
-  
 }
 
+@media screen and ((min-height: 600px) or (min-width: 600px)) {
+}
 
+@media screen and (min-width: 900px) {
+  .content-main {
+    animation: mariorun calc(var(--mario-run-animation-speed) * 3) linear 0s
+      infinite;
+  }
 
-@media screen and (min-width: 900px) {}
-@media screen and (min-width: 1200px) {}
-@media screen and (min-width: 1800px) {}
+  .footer-main {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .content-main {
+    animation: mariorun calc(var(--mario-run-animation-speed) * 4) linear 0s
+      infinite;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .content-main {
+    animation: mariorun calc(var(--mario-run-animation-speed) * 5) linear 0s
+      infinite;
+  }
+
+  .baddie-ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .baddie-name {
+    border-top: none;
+  }
+}
