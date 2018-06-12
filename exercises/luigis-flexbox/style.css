@@ -1,0 +1,187 @@
+@font-face {
+  font-family: SuperMario;
+  src: url('./fonts/SuperMario256.ttf');
+}
+
+:root {
+  --header-bgc: #ffd835;
+  --banner-bgc: red;
+  --mario-font: SuperMario, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  border: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.container {
+  background-color: teal;
+  display: grid;
+  grid-template-rows: 102px 1fr 78px;
+  height: 100%;
+  overflow: auto;
+}
+
+.squeeze {
+  max-width: calc(100% - 20px);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header-main {
+  background-color: var(--header-bgc);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.header-main .squeeze {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  width: 100%;
+}
+
+.h1-brand {
+  color: var(--banner-bgc);
+  font-family: var(--mario-font);
+  font-size: 3.79em;
+  position: relative;
+  top: 0.125em;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner {
+  background-color: var(--banner-bgc);
+}
+
+.banner .squeeze {
+  align-items: center;
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  justify-content: center;
+  padding-bottom: 1.9em; /* matches design */
+  padding-top: 1.6em; /* matches design */
+}
+
+.banner-img-main {
+  max-width: 75%;
+}
+
+.about-article {
+  background-color: #fff;
+  color: var(--banner-bgc);
+  display: flex;
+  flex-grow: 1;
+}
+
+.about-article .squeeze {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  padding: 1.5em 10px;
+}
+
+.h1-article {
+  font-family: var(--mario-font);
+  font-size: 2.5em;
+  letter-spacing: 1px;
+  margin-bottom: 0.5227em;
+}
+
+.about-article p {
+  font-size: 1.5em;
+  font-weight: 900;
+  line-height: 1.225em;
+  margin-bottom: 0.58em;
+  max-width: 350px;
+  text-align: center;
+  word-spacing: 0.3em;
+}
+
+.footer-main {
+  background-color: var(--header-bgc);
+}
+
+.footer-main .squeeze {
+  align-items: center;
+  display: flex;
+  height: 78px;
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+
+.footer-branding-img {
+  height: 70px;
+}
+
+@media (min-width: 300px) {
+  .squeeze {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .h1-article {
+    font-family: var(--mario-font);
+    font-size: 2.7em;
+    letter-spacing: 1px;
+    margin-bottom: 0.5227em;
+  }
+}
+
+@media (min-width: 600px) {
+  .squeeze {
+    max-width: 780px;
+  }
+
+  .header-main .squeeze {
+    justify-content: flex-start;
+  }
+
+  .h1-article {
+    font-family: var(--mario-font);
+    font-size: 2.925em;
+    letter-spacing: 1px;
+    margin-bottom: 0.5227em;
+  }
+}
+
+@media (min-width: 900px) {
+  .squeeze {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
