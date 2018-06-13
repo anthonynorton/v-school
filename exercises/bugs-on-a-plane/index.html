@@ -5,71 +5,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hassera Air</title>
+  <title>Tayira Air</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="container">
+    <h1 class="h1-brand">
+      <span>Tayira</span> Air
+    </h1>
     <div class="wrapper">
-      <h1 class="brand">Hassera Air</h1>
       <section class="passenger-info">
-        <form>
-          <p>
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" placeholders="Name">
-          </p>
-          <p>
-            <label for="age">Age: </label>
-            <input id="age" name="age" type="number" min="0" max="150" placeholder="Age" default="18">
-          </p>
-          <p>
-            <ul>
-              <li>
-                <label for="male">Male</label>
-                <input type="radio" name="male" id="male">
-              </li>
-              <li>
-                <label for="female">Female</label>
-                <input type="radio" name="female" id="female">
-              </li>
-              <li>
-                <label for="prefer-not">Prefer not to say</label>
-                <input type="radio" name="prefer-not" id="prefer-not">
-              </li>
-            </ul>
-          </p>
-          <p>
-            <select name="destination" id="destionation">
-              <option value="lax">Los Angeles Internation Airport</option>
-              <option value="jfk">John F. Kennedy International Sirport</option>
-              <option value="atl">Hartsfield–Jackson International Airport</option>
-            </select>
-          </p>
-          <p>
-            <ul>
-              <li>
-                <label for="vegan"></label>
-                <input type="checkbox" name="vegan" id="vegan">
-              </li>
-              <li>
-                <label for="gluten"></label>
-                <input type="checkbox" name="gluten" id="gluten">
-              </li>
-              <li>
-                <label for="paleo"></label>
-                <input type="checkbox" name="paleo" id="paleo">
-              </li>
-            </ul>
-          </p>
-          <p>
-            <button>
-              Submit
-            </button>
-          </p>
-        </form>
+
+        <div class="entreaty">
+          <p>To help us better assist you please fill out the following.</p>
+        </div>
+        <div class="form-wrap">
+          <div class="contain">
+            <h3>Passenger Info</h3>
+          </div>
+          <form>
+            <p class="input-wrap">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholders="Name" placeholder="e.g Jane Smith">
+            </p>
+            <p class="input-wrap">
+              <label for="age">Age: </label>
+              <input id="age" name="age" type="number" min="0" max="150" placeholder="e.g. 42" default="18">
+            </p>
+            <div class="select-custom input-wrap-select-custom">
+              <label for="destination">Destination</label>
+              <div class="select-custom-input" name="destination" id="destination" type="text">Hartsfield–Jackson International Airport</div>
+              <ul class="select-custom-opts">
+                <li class="select-custom-opt" data-value="lax">Los Angeles International Airport</li>
+                <li class="select-custom-opt" data-value="jfk">John F. Kennedy International Airport</li>
+                <li class="select-custom-opt" data-value="atl">Hartsfield–Jackson International Airport</li>
+                <li class="select-custom-opt" data-value="atl">Hartsfield–Jackson International Airport</li>
+                <li class="select-custom-opt" data-value="atl">Hartsfield–Jackson International Airport</li>
+                <li class="select-custom-opt" data-value="atl">Hartsfield–Jackson International Airport</li>
+                <li class="select-custom-opt" data-value="atl">Hartsfield–Jackson International Airport</li>
+                <li class="select-custom-opt" data-value="atl">Hartsfield–Jackson International Airport</li>
+              </ul>
+            </div>
+
+            <div class="input-wrap">
+              <label>Gender</label>
+              <ul class="input-cb-rb-ul">
+                <li>
+                  <label for="male">Male</label>
+                  <input type="radio" name="gender" id="male" />
+                </li>
+                <li>
+                  <label for="female">Female</label>
+                  <input type="radio" name="gender" id="female" />
+                </li>
+                <li>
+                  <label for="prefer-not">Prefer not to say</label>
+                  <input type="radio" name="gender" id="prefer-not" />
+                </li>
+              </ul>
+            </div>
+
+            <div class="input-wrap">
+              <label>Dietary Restrictions</label>
+              <ul class="input-cb-rb-ul">
+                <li>
+                  <label for="vegan">Vegan</label>
+                  <input type="checkbox" name="vegan" id="vegan">
+                </li>
+                <li>
+                  <label for="gluten">Gluten</label>
+                  <input type="checkbox" name="gluten" id="gluten">
+                </li>
+                <li>
+                  <label for="paleo">Paleo</label>
+                  <input type="checkbox" name="paleo" id="paleo">
+                </li>
+              </ul>
+            </div>
+            <p class="input-wrap full">
+              <button>
+                Submit
+              </button>
+            </p>
+          </form>
+        </div>
       </section>
     </div>
   </div>
+  <script src="./app.js"></script>
 </body>
 
 </html>
